@@ -110,6 +110,13 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 .film-card .ded { position: relative; font-style: italic; font-family: var(--font-serif); color: var(--sage-dk); margin-top: 0.35rem; font-size: 1.05rem; }
 .film-card .badge { position: absolute; top: 1.1rem; right: 1.1rem; background: var(--sage); color: #fff; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 999px; }
 
+/* ---- epigraph (standalone opening line) ---- */
+.epigraph { background: linear-gradient(180deg, var(--cream), var(--ivory)); text-align: center; padding-block: clamp(5rem, 13vw, 9.5rem); }
+.epigraph .container { max-width: 880px; }
+.epigraph-line { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.55rem, 3.8vw, 2.5rem); line-height: 1.4; color: var(--ink); }
+.epigraph-turn { color: var(--sage-dk); margin-top: 0.4rem; }
+.epigraph-rule { display: block; width: 54px; height: 2px; margin: 1.5rem auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
 /* ---- story (long-form narrative) ---- */
 .story { background: var(--ivory); }
 .story-wrap { max-width: 740px; margin-inline: auto; }

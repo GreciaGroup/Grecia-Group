@@ -52,6 +52,10 @@ export const t = {
       },
       comingSoon: 'Muy pronto',
     },
+    epigraph: {
+      a: 'Hay despedidas que terminan una vida…',
+      b: 'Y hay despedidas que dan origen a una promesa de amor eterno.',
+    },
     story: {
       heading: 'Mi historia',
       blocks: [
@@ -132,6 +136,10 @@ export const t = {
         6: 'They say I am a prisoner. They do not know I am free.',
       },
       comingSoon: 'Coming soon',
+    },
+    epigraph: {
+      a: 'There are farewells that end a life…',
+      b: 'And there are farewells that give rise to a promise of eternal love.',
     },
     story: {
       heading: 'My story',
