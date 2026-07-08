@@ -58,6 +58,7 @@ export const t = {
     },
     story: {
       heading: 'Mi historia',
+      photoAlt: 'Roxana y su madre, frente con frente, tomadas de la mano',
       blocks: [
         { type: 'p', text: `Hay promesas que nacen del amor. Y hay promesas tan profundas que terminan convirtiéndose en el propósito de una vida.` },
         { type: 'p', text: `Mi padre era un hombre fuerte, noble, digno, y profundamente enamorado de mi madre. Un cáncer agresivo apareció sin anunciarse y, en apenas quince días, nos llevó hasta el momento más difícil de nuestras vidas.` },
@@ -143,6 +144,7 @@ export const t = {
     },
     story: {
       heading: 'My story',
+      photoAlt: 'Roxana and her mother, forehead to forehead, holding hands',
       blocks: [
         { type: 'p', text: `There are promises born of love. And there are promises so deep that they become the purpose of a life.` },
         { type: 'p', text: `My father was a strong, noble, dignified man, and deeply in love with my mother. An aggressive cancer appeared without warning, and in just fifteen days it carried us to the hardest moment of our lives.` },

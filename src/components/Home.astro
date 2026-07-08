@@ -74,7 +74,9 @@ const { t } = Astro.props;
         <p class="eyebrow">{t.hero.title}</p>
         <h2 class="section-title">{t.story.heading}</h2>
       </header>
-      <div class="story-photo reveal" role="img" aria-label="Roxana y su madre"></div>
+      <figure class="story-photo reveal">
+        <img src="/images/story-madre.webp" width="780" height="1398" alt={t.story.photoAlt} loading="lazy" decoding="async" />
+      </figure>
       <div class="story-body">
         {t.story.blocks.map((b) =>
           b.type === 'quote' ? (

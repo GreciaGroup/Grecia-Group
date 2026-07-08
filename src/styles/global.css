@@ -121,8 +121,8 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 .story { background: var(--ivory); }
 .story-wrap { max-width: 740px; margin-inline: auto; }
 .story-head { text-align: center; margin-bottom: 2.5rem; }
-.story-photo { width: min(400px, 100%); aspect-ratio: 4 / 5; margin: 0 auto 3.5rem; border-radius: var(--radius); background: linear-gradient(160deg, #A9C0AE, #7C9885); box-shadow: var(--shadow); position: relative; overflow: hidden; }
-.story-photo::after { content: "Roxana y su madre"; position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255,255,255,0.75); font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; }
+.story-photo { width: min(380px, 100%); margin: 0 auto 3.5rem; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.story-photo img { display: block; width: 100%; height: auto; }
 .story-body { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.22rem, 0.5vw + 1.15rem, 1.42rem); line-height: 1.85; color: var(--ink); }
 .story-body p { margin-bottom: 1.45rem; color: var(--ink); }
 .story-body p:first-of-type::first-letter { font-family: var(--font-serif); font-style: normal; font-size: 4rem; font-weight: 600; float: left; line-height: 0.8; padding: 0.35rem 0.7rem 0 0; color: var(--clay); }
