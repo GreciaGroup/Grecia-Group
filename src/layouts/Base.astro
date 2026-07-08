@@ -1,0 +1,83 @@
+---
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/400-italic.css';
+import '@fontsource/source-sans-3/400.css';
+import '@fontsource/source-sans-3/600.css';
+import '../styles/global.css';
+
+const { title, description, lang = 'es', canonical } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://greciagroup.com';
+
+// JSON-LD: Organization + Person (Roxana) — GEO/AEO entity signals
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site}/#org`,
+      name: 'Grecia Group',
+      url: site,
+      description:
+        'A sanctuary for Spanish-speaking caregivers: original musical films for those caring for aging or ill loved ones.',
+      founder: { '@id': `${site}/#roxana` },
+      sameAs: [
+        'https://www.youtube.com/@TenderHeartRhythms',
+        'https://www.instagram.com/thegreciagroup',
+      ],
+    },
+    {
+      '@type': 'Person',
+      '@id': `${site}/#roxana`,
+      name: 'Roxana Grecia',
+      jobTitle: 'Founder and Creator',
+      worksFor: { '@id': `${site}/#org` },
+      description:
+        'Creator of Tender Heart Rhythms, original caregiver songs born from caring for her father in his final days and now her mother.',
+    },
+  ],
+};
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="alternate" hreflang="es" href={`${site}/`} />
+    <link rel="alternate" hreflang="en" href={`${site}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}/`} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Grecia Group" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#6D2A34" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Scroll reveal — respects prefers-reduced-motion via CSS.
+      const els = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && els.length) {
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          }
+        }, { threshold: 0.12 });
+        els.forEach((el) => io.observe(el));
+      } else {
+        els.forEach((el) => el.classList.add('in'));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+# greciagroup.com
+# Welcome traditional crawlers AND AI answer engines (GEO/AEO).
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://greciagroup.com/sitemap-index.xml

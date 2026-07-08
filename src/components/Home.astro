@@ -1,0 +1,110 @@
+---
+import { films } from '../i18n.js';
+const { t } = Astro.props;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href={t.dir}>
+      {t.hero.brand}
+      <span>{t.footer.sub}</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <div class="nav-links">
+        <a href="#peliculas">{t.nav.films}</a>
+        <a href="#historia">{t.nav.story}</a>
+        <a href="#regalo">{t.nav.gift}</a>
+        <a href="#tienda">{t.nav.shop}</a>
+      </div>
+      <a class="lang-toggle" href={t.otherHref}>{t.otherLabel}</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="brand">{t.hero.brand}</p>
+      <h1>{t.hero.title}</h1>
+      <p class="tagline">{t.hero.tagline}</p>
+      <p class="sub">{t.hero.sub}</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#regalo">{t.hero.ctaPrimary}</a>
+        <a class="btn btn-ghost" href="#peliculas">{t.hero.ctaSecondary}</a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </section>
+
+  <!-- FILMS -->
+  <section id="peliculas" class="films">
+    <div class="container">
+      <p class="eyebrow reveal">{t.hero.title}</p>
+      <h2 class="section-title reveal">{t.films.heading}</h2>
+      <p class="intro reveal">{t.films.intro}</p>
+      <div class="film-grid">
+        {films.map((f) => (
+          <a class="film-card reveal" href={f.youtube || '#'} aria-label={t.films.titles[f.id]}>
+            <span class="num">{String(f.id).padStart(2, '0')}</span>
+            <span class="badge">{t.films.comingSoon}</span>
+            <h3>{t.films.titles[f.id]}</h3>
+            <p class="ded">{t.films.dedications[f.id]}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="historia" class="story">
+    <div class="container story-grid">
+      <div class="story-photo reveal" role="img" aria-label="Roxana y su madre"></div>
+      <div class="story-body reveal">
+        <p class="eyebrow">{t.story.heading}</p>
+        <h2 class="section-title">{t.story.heading}</h2>
+        {t.story.body.map((p) => <p>{p}</p>)}
+        <p class="signature">{t.story.signature}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT / EMAIL CAPTURE -->
+  <section id="regalo" class="gift">
+    <div class="container">
+      <h2 class="section-title reveal">{t.gift.heading}</h2>
+      <p class="sub reveal">{t.gift.sub}</p>
+      <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
+      <form class="reveal" name="signup" data-ghl="pending" onsubmit="return false;">
+        <input type="email" name="email" placeholder={t.gift.placeholder} required aria-label={t.gift.placeholder} />
+        <button class="btn btn-primary" type="submit">{t.gift.button}</button>
+      </form>
+      <p class="privacy reveal">{t.gift.privacy}</p>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="tienda" class="shop">
+    <div class="container">
+      <p class="eyebrow reveal">{t.shop.heading}</p>
+      <h2 class="section-title reveal">{t.shop.heading}</h2>
+      <p class="intro reveal">{t.shop.intro}</p>
+      <div class="shop-actions reveal">
+        <a class="btn btn-vino" href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">{t.shop.etsy}</a>
+      </div>
+      <small class="soon reveal">{t.shop.soon}</small>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="fbrand">{t.footer.brand}</p>
+    <p class="fsub">{t.footer.sub}</p>
+    <div class="social">
+      <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/thegreciagroup" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">Etsy</a>
+    </div>
+    <small>&copy; {new Date().getFullYear()} {t.footer.brand}. {t.footer.rights}</small>
+  </div>
+</footer>

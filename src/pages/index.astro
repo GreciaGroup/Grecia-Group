@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import Home from '../components/Home.astro';
+import { t } from '../i18n.js';
+const tr = t.es;
+---
+<Base title={tr.meta.title} description={tr.meta.description} lang="es" canonical="https://greciagroup.com/">
+  <Home t={tr} />
+</Base>
