@@ -21,7 +21,7 @@ export const t = {
       description:
         'Canciones para el corazon que sostiene la mano que otros soltaron. Peliculas musicales para cuidadores, en espanol. Por Roxana Grecia.',
     },
-    nav: { films: 'Las canciones', story: 'Mi historia', gift: 'Regalo', shop: 'Tienda' },
+    nav: { films: 'Las canciones', story: 'Mi historia', share: 'Comparte', gift: 'Regalo', shop: 'Tienda' },
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
@@ -77,6 +77,15 @@ export const t = {
       signoff: 'Con todo mi cariño,',
       name: 'Roxana Grecia',
     },
+    share: {
+      heading: 'Comparte tu historia',
+      sub: 'Cada canción nace de una historia real. Si cuidas o cuidaste a alguien que amas, cuéntame tu historia. Quizás la próxima canción sea la tuya.',
+      namePlaceholder: 'Tu nombre',
+      emailPlaceholder: 'Tu correo',
+      storyPlaceholder: 'Cuéntame tu historia...',
+      button: 'Enviar mi historia',
+      privacy: 'Tu historia está segura conmigo. La leo con el corazón.',
+    },
     gift: {
       heading: 'Recibe una canción para tu alma',
       sub: 'Deja tu correo y te envío un regalo gratis para los días difíciles, y te aviso cuando salga cada nueva canción.',
@@ -107,7 +116,7 @@ export const t = {
       description:
         'Songs for the heart that holds the hand others let go of. Musical films for caregivers. By Roxana Grecia.',
     },
-    nav: { films: 'The songs', story: 'My story', gift: 'Gift', shop: 'Shop' },
+    nav: { films: 'The songs', story: 'My story', share: 'Share', gift: 'Gift', shop: 'Shop' },
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
@@ -162,6 +171,15 @@ export const t = {
       ],
       signoff: 'With all my love,',
       name: 'Roxana Grecia',
+    },
+    share: {
+      heading: 'Share your story',
+      sub: 'Every song is born from a true story. If you care, or once cared, for someone you love, tell me your story. Perhaps the next song will be yours.',
+      namePlaceholder: 'Your name',
+      emailPlaceholder: 'Your email',
+      storyPlaceholder: 'Tell me your story...',
+      button: 'Send my story',
+      privacy: 'Your story is safe with me. I read every one with my heart.',
     },
     gift: {
       heading: 'Receive a song for your soul',
