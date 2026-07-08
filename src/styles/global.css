@@ -142,6 +142,21 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 .site-footer .social a:hover { color: var(--gold); }
 .site-footer small { color: rgba(246,240,230,0.55); }
 
+/* ---- floating light orbs (hero warmth) ---- */
+.orb { position: absolute; border-radius: 50%; filter: blur(64px); opacity: 0.55; pointer-events: none; z-index: 1; will-change: transform, translate; }
+.orb-1 { width: 440px; height: 440px; background: radial-gradient(circle, rgba(214, 168, 91, 0.55), transparent 70%); top: -90px; left: -70px; animation: float1 15s ease-in-out infinite; }
+.orb-2 { width: 520px; height: 520px; background: radial-gradient(circle, rgba(124, 152, 133, 0.5), transparent 70%); bottom: -140px; right: -90px; animation: float2 19s ease-in-out infinite; }
+.orb-3 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(206, 138, 106, 0.4), transparent 70%); top: 40%; left: 55%; animation: float1 22s ease-in-out infinite; }
+@keyframes float1 { 0%, 100% { translate: 0 0; } 50% { translate: 0 32px; } }
+@keyframes float2 { 0%, 100% { translate: 0 0; } 50% { translate: 0 -36px; } }
+.hero-inner { will-change: transform; }
+
+/* ---- film card cursor glow ---- */
+.film-card { --mx: 50%; --my: 50%; }
+.film-card::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.35s ease; background: radial-gradient(220px circle at var(--mx) var(--my), rgba(214, 168, 91, 0.22), transparent 60%); }
+.film-card:hover::after { opacity: 1; }
+.film-card > * { position: relative; z-index: 1; }
+
 /* ---- scroll reveal ---- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.in { opacity: 1; transform: none; }

@@ -23,7 +23,10 @@ const { t } = Astro.props;
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+    <div class="hero-inner" data-parallax="0.12">
       <p class="brand">{t.hero.brand}</p>
       <h1>{t.hero.title}</h1>
       <p class="tagline">{t.hero.tagline}</p>

@@ -66,6 +66,9 @@ const schema = {
   <body>
     <slot />
     <script>
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const finePointer = window.matchMedia('(pointer: fine)').matches;
+
       // Scroll reveal — respects prefers-reduced-motion via CSS.
       const els = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window && els.length) {
@@ -77,6 +80,49 @@ const schema = {
         els.forEach((el) => io.observe(el));
       } else {
         els.forEach((el) => el.classList.add('in'));
+      }
+
+      if (!reduce) {
+        // Gentle cursor parallax on the hero light-orbs + card glow (desktop only).
+        if (finePointer) {
+          const hero = document.querySelector('.hero');
+          const orbs = [...document.querySelectorAll('.orb')];
+          if (hero && orbs.length) {
+            hero.addEventListener('mousemove', (e) => {
+              const r = hero.getBoundingClientRect();
+              const x = (e.clientX - r.left) / r.width - 0.5;
+              const y = (e.clientY - r.top) / r.height - 0.5;
+              orbs.forEach((o, i) => {
+                const d = (i + 1) * 16;
+                o.style.transform = `translate(${x * d}px, ${y * d}px)`;
+              });
+            });
+          }
+          document.querySelectorAll('.film-card').forEach((card) => {
+            card.addEventListener('mousemove', (e) => {
+              const r = card.getBoundingClientRect();
+              card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+              card.style.setProperty('--my', `${e.clientY - r.top}px`);
+            });
+          });
+        }
+
+        // Soft scroll parallax on tagged layers.
+        const layers = [...document.querySelectorAll('[data-parallax]')];
+        if (layers.length) {
+          let ticking = false;
+          const update = () => {
+            const sy = window.scrollY;
+            layers.forEach((el) => {
+              const speed = parseFloat(el.dataset.parallax) || 0.15;
+              el.style.transform = `translateY(${sy * speed}px)`;
+            });
+            ticking = false;
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking) { ticking = true; requestAnimationFrame(update); }
+          }, { passive: true });
+        }
       }
     </script>
   </body>
