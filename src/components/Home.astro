@@ -60,13 +60,25 @@ const { t } = Astro.props;
 
   <!-- STORY -->
   <section id="historia" class="story">
-    <div class="container story-grid">
-      <div class="story-photo reveal" role="img" aria-label="Roxana y su madre"></div>
-      <div class="story-body reveal">
-        <p class="eyebrow">{t.story.heading}</p>
+    <div class="container story-wrap">
+      <header class="story-head reveal">
+        <p class="eyebrow">{t.hero.title}</p>
         <h2 class="section-title">{t.story.heading}</h2>
-        {t.story.body.map((p) => <p>{p}</p>)}
-        <p class="signature">{t.story.signature}</p>
+      </header>
+      <div class="story-photo reveal" role="img" aria-label="Roxana y su madre"></div>
+      <div class="story-body">
+        {t.story.blocks.map((b) =>
+          b.type === 'quote' ? (
+            <blockquote class="story-quote reveal">{b.text}</blockquote>
+          ) : b.type === 'em' ? (
+            <p class="story-em reveal">{b.text}</p>
+          ) : b.type === 'closing' ? (
+            <p class="story-closing reveal">{b.text}</p>
+          ) : (
+            <p class="reveal">{b.text}</p>
+          )
+        )}
+        <p class="signature reveal">{t.story.signoff}<br /><span>{t.story.name}</span></p>
       </div>
     </div>
   </section>
