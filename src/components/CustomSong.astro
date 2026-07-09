@@ -1,0 +1,86 @@
+---
+// Product page: "Tu Canción" personalized song
+const { t, home, commerceHref } = Astro.props;
+const c = t.custom;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href={home}>
+      {t.hero.brand}
+      <span>{t.footer.sub}</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="lang-toggle" href={t.otherLabel === 'EN' ? '/en/custom-song' : '/cancion-personalizada'}>{t.otherLabel}</a>
+    </nav>
+  </div>
+</header>
+
+<main class="product">
+  <!-- HERO -->
+  <section class="prod-hero">
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow reveal">{c.eyebrow}</p>
+      <h1 class="reveal">{c.title}</h1>
+      <p class="prod-tagline reveal">{c.tagline}</p>
+      <p class="prod-intro reveal">{c.intro}</p>
+      <a class="btn btn-primary reveal" href={commerceHref}>{c.cta}</a>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section class="tiers">
+    <div class="container">
+      <h2 class="section-title reveal">{c.tiersHeading}</h2>
+      <div class="tier-grid">
+        {c.tiers.map((tier) => (
+          <div class:list={["tier-card", "reveal", { popular: tier.popular }]}>
+            {tier.popular && <span class="tier-badge">{c.popularLabel}</span>}
+            <h3>{tier.name}</h3>
+            <p class="tier-price">{tier.price}</p>
+            <ul>
+              {tier.features.map((f) => <li>{f}</li>)}
+            </ul>
+            <a class:list={["btn", tier.popular ? "btn-primary" : "btn-ghost"]} href={commerceHref}>{c.cta}</a>
+          </div>
+        ))}
+      </div>
+      <p class="scarcity reveal">{c.scarcity}</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <h2 class="section-title reveal">{c.processHeading}</h2>
+      <div class="step-grid">
+        {c.steps.map((s) => (
+          <div class="step reveal">
+            <span class="step-n">{s.n}</span>
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </div>
+        ))}
+      </div>
+      <div class="prod-cta reveal">
+        <a class="btn btn-primary" href={commerceHref}>{c.cta}</a>
+        <a class="btn-text" href={home}>{c.back}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="fbrand">{t.footer.brand}</p>
+    <p class="fsub">{t.footer.sub}</p>
+    <div class="social">
+      <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/thegreciagroup" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.pinterest.com/greciagroup" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">Etsy</a>
+    </div>
+    <small>&copy; {new Date().getFullYear()} {t.footer.brand}. {t.footer.rights}</small>
+  </div>
+</footer>

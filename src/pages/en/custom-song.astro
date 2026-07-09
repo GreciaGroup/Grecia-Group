@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import CustomSong from '../../components/CustomSong.astro';
+import { t } from '../../i18n.js';
+const tr = t.en;
+---
+<Base title={tr.custom.metaTitle} description={tr.custom.metaDesc} lang="en" canonical="https://greciagroup.com/en/custom-song">
+  <CustomSong t={tr} home="/en/" commerceHref="/en/#comparte" />
+</Base>

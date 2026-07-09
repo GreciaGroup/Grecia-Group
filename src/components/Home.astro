@@ -132,6 +132,7 @@ const { t } = Astro.props;
       <h2 class="section-title reveal">{t.shop.heading}</h2>
       <p class="intro reveal">{t.shop.intro}</p>
       <div class="shop-actions reveal">
+        <a class="btn btn-primary" href={t.lang === 'es' ? '/cancion-personalizada' : '/en/custom-song'}>{t.shop.customLink}</a>
         <a class="btn btn-vino" href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">{t.shop.etsy}</a>
       </div>
       <small class="soon reveal">{t.shop.soon}</small>
