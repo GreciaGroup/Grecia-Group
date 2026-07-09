@@ -88,7 +88,7 @@ export const t = {
     },
     gift: {
       heading: 'Recibe una canción para tu alma',
-      sub: 'Deja tu correo y te envío un regalo gratis para los días difíciles, y te aviso cuando salga cada nueva canción.',
+      sub: 'Déjame tu correo y te regalo una canción para los días difíciles, junto con un pequeño cuadernillo de afirmaciones para el corazón que cuida. Y te aviso cuando nazca cada nueva canción.',
       placeholder: 'tu correo',
       button: 'Quiero mi regalo',
       privacy: 'Sin spam. Solo consuelo. Puedes salir cuando quieras.',
@@ -183,7 +183,7 @@ export const t = {
     },
     gift: {
       heading: 'Receive a song for your soul',
-      sub: 'Leave your email and I will send you a free gift for the hard days, and let you know when each new song is released.',
+      sub: 'Leave me your email and I will send you a free song for the hard days, along with a little booklet of affirmations for the heart that cares. And I will let you know when each new song is born.',
       placeholder: 'your email',
       button: 'Send my gift',
       privacy: 'No spam. Only comfort. Leave anytime.',
