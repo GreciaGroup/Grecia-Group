@@ -61,7 +61,7 @@ export const t = {
       photoAlt: 'Roxana y su madre, frente con frente, tomadas de la mano',
       blocks: [
         { type: 'p', text: `Hay promesas que nacen del amor. Y hay promesas tan profundas que terminan convirtiéndose en el propósito de una vida.` },
-        { type: 'p', text: `Mi padre era un hombre fuerte, noble, digno, y profundamente enamorado de mi madre. Un cáncer agresivo apareció sin anunciarse y, en apenas quince días, nos llevó hasta el momento más difícil de nuestras vidas.` },
+        { type: 'p', text: `Mi padre era un hombre fuerte, noble, digno, y profundamente enamorado de mi madre. Un cáncer agresivo apareció sin anunciarse y, en solo quince días, nos llevó hasta el momento más difícil de nuestras vidas.` },
         { type: 'p', text: `Tuve el privilegio de acompañarlo hasta su último aliento. Aún puedo sentir la calidez de su mano entre las mías. Miró a la mujer que había amado durante toda su vida con unos ojos llenos de ternura y de lágrimas. Después volvió su mirada hacia mí. Con la voz quebrada, pero con el corazón lleno de amor, me dijo:` },
         { type: 'quote', text: `Hijita... cuando yo ya no esté y tu madre mire hacia la puerta esperándome, abrázala por mí. Cuando extrañe mi voz, háblale con ternura de mí. Cuando necesite una mano para caminar, préstale la tuya como si fuera la mía la que la apoya. Y cuando una lágrima le recuerde que ya no estoy, recuérdale que nunca dejé de amarla... porque el amor verdadero no muere con quien parte. Solo encuentra otro corazón desde donde seguir amando. Hoy ese corazón será el tuyo.` },
         { type: 'p', text: `No fue una obligación. Fue el regalo más sagrado que un padre pudo confiarle a su hija.` },
