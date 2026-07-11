@@ -226,3 +226,24 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
   .scroll-hint { animation: none; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
+
+/* ---- content protection (deterrent layer) ----
+   Discourages casual copying: no dragging images/video to desktop, no long-press
+   "save image" on mobile, no accidental text selection of media. Body copy stays
+   selectable for accessibility; on copy we append attribution (see Base.astro). */
+img, video, .protect {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none; /* iOS: no "Save Image" popup */
+  user-select: none;
+}
+video::-webkit-media-controls-download-button { display: none; } /* hide download in Chrome */
+.site-footer .flegal {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: rgba(246, 240, 230, 0.55);
+}

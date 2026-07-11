@@ -61,10 +61,40 @@ const schema = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#6D2A34" />
 
+    <!-- Ownership / rights signals -->
+    <meta name="copyright" content="© Grecia Group — Tender Heart Rhythms. Todos los derechos reservados." />
+    <meta name="author" content="Roxana Grecia" />
+    <meta name="rights" content="All rights reserved. Reproduction, redistribution, or reuse without written permission is prohibited." />
+
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
     <slot />
+    <script>
+      // ---- Content protection (deterrent layer) ----
+      // The open web must download HTML/CSS/images to render them, so nothing can
+      // be made truly uncopyable. This raises the effort for casual copying:
+      // blocks image/media drag + right-click "save", and stamps copied text with
+      // an attribution line. Body text stays selectable for accessibility.
+      (() => {
+        const isMedia = (el) => el && (el.tagName === 'IMG' || el.tagName === 'VIDEO' || el.closest?.('.protect'));
+        // Block dragging media out to the desktop.
+        document.addEventListener('dragstart', (e) => { if (isMedia(e.target)) e.preventDefault(); });
+        // Block the right-click "Save image / Save video" menu on media only.
+        document.addEventListener('contextmenu', (e) => { if (isMedia(e.target)) e.preventDefault(); });
+        // Append attribution when visitors copy text.
+        document.addEventListener('copy', (e) => {
+          const sel = document.getSelection()?.toString() ?? '';
+          if (sel.length > 12 && e.clipboardData) {
+            e.clipboardData.setData(
+              'text/plain',
+              `${sel}\n\n— © ${new Date().getFullYear()} Grecia Group · Tender Heart Rhythms · greciagroup.com`
+            );
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
     <script>
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const finePointer = window.matchMedia('(pointer: fine)').matches;

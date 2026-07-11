@@ -129,6 +129,7 @@ export const t = {
       brand: 'Grecia Group',
       sub: 'Tender Heart Rhythms',
       rights: 'Hecho con fe y amor.',
+      legal: 'Todos los derechos reservados. Las canciones, videos, textos e imágenes de este sitio son propiedad de Grecia Group. Prohibida su reproducción o uso sin permiso escrito.',
     },
   },
 
@@ -250,6 +251,7 @@ export const t = {
       brand: 'Grecia Group',
       sub: 'Tender Heart Rhythms',
       rights: 'Made with faith and love.',
+      legal: 'All rights reserved. The songs, videos, text, and images on this site are the property of Grecia Group. Reproduction or use without written permission is prohibited.',
     },
   },
 };
