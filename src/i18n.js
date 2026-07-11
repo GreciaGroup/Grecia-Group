@@ -44,7 +44,7 @@ export const t = {
       },
       dedications: {
         1: 'Para mi padre. Se fue en 15 dias. Esta cancion es mi promesa.',
-        2: 'Para mi madre. Ella ya olvida, pero el amor no se olvida.',
+        2: 'Para mi madre. Cuando la niebla amenaza a mamá, el amor no se olvida.',
         3: 'Cuando cuidas a todos, quien te cuida a ti.',
         4: 'Nadie aplaude al que cuida. Esta cancion, si.',
         5: 'Busco tu sonrisa, papa, en cada amanecer.',
@@ -166,7 +166,7 @@ export const t = {
       },
       dedications: {
         1: 'For my father. He was gone in 15 days. This song is my promise.',
-        2: 'For my mother. She forgets now, but love is never forgotten.',
+        2: 'For my mother. When the fog comes for her, love is never forgotten.',
         3: 'When you care for everyone, who cares for you.',
         4: 'No one applauds the caregiver. This song does.',
         5: 'I look for your smile, Papa, in every sunrise.',
