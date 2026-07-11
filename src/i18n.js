@@ -111,7 +111,7 @@ export const t = {
       popularLabel: 'Más elegida',
       tiers: [
         { name: 'La Canción', price: '$129', popular: false, features: ['Una canción original (2 a 4 min) sobre tu ser querido', 'Escrita a partir de tu historia', 'Revisas la letra antes de finalizar', 'Entrega digital (MP3 + letra) en ~2 semanas'] },
-        { name: 'Canción + Película de Recuerdo', price: '$299', popular: true, features: ['Todo lo de La Canción', 'Una película con tus fotos y la canción', 'Versión horizontal y vertical para compartir', 'Letras en pantalla, estilo cine'] },
+        { name: 'Canción + Video de Recuerdo', price: '$299', popular: true, features: ['Todo lo de La Canción', 'Un video con tus fotos y la canción', 'Versión horizontal y vertical para compartir', 'Letras en pantalla, estilo cine'] },
         { name: 'Legado', price: '$499', popular: false, features: ['Todo lo anterior', 'Arte de la letra para enmarcar', 'Entrega prioritaria', 'Una dedicatoria hablada, con tu voz o la mía'] },
       ],
       processHeading: 'Cómo funciona',
@@ -233,7 +233,7 @@ export const t = {
       popularLabel: 'Most chosen',
       tiers: [
         { name: 'The Song', price: '$129', popular: false, features: ['An original song (2 to 4 min) about your loved one', 'Written from your story', 'You review the lyrics before it is finalized', 'Digital delivery (MP3 + lyrics) in ~2 weeks'] },
-        { name: 'Song + Memory Film', price: '$299', popular: true, features: ['Everything in The Song', 'A film with your photos and the song', 'Horizontal and vertical versions to share', 'On-screen lyrics, cinematic style'] },
+        { name: 'Song + Memory Video', price: '$299', popular: true, features: ['Everything in The Song', 'A video with your photos and the song', 'Horizontal and vertical versions to share', 'On-screen lyrics, cinematic style'] },
         { name: 'Legacy', price: '$499', popular: false, features: ['Everything above', 'Framed lyric art', 'Priority delivery', 'A spoken dedication, in your voice or mine'] },
       ],
       processHeading: 'How it works',
