@@ -95,7 +95,7 @@ export const t = {
     },
     shop: {
       heading: 'La tienda',
-      intro: 'Recursos para acompanar tu camino de cuidado.',
+      intro: 'Recursos para acompañar tu camino de cuidado.',
       etsy: 'Ver en Etsy',
       soon: 'Mas productos muy pronto',
       customLink: 'Tu Canción personalizada',
