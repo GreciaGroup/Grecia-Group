@@ -179,28 +179,49 @@ const { t } = Astro.props;
 <style>
   .gratitude { padding: clamp(3rem, 7vw, 5.5rem) 0; }
   .grat-list {
-    list-style: none; margin: 2.2rem 0 0; padding: 0;
-    display: grid; gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    list-style: none; margin: 2.4rem 0 0; padding: 0;
+    display: grid; gap: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .grat-item {
-    background: #FFFDF8; border: 1px solid #E7DDCA; border-radius: 16px;
-    padding: 1.35rem 1.45rem;
-    box-shadow: 0 1px 2px rgba(59,55,47,.05), 0 10px 26px rgba(59,55,47,.06);
+    position: relative; overflow: hidden;
+    background: #FFFDF8; border: 1px solid #E7DDCA; border-radius: 18px;
+    padding: 1.5rem 1.5rem 1.55rem;
+    box-shadow: 0 1px 2px rgba(59,55,47,.05), 0 12px 30px rgba(59,55,47,.07);
+    transition: transform .3s ease, box-shadow .3s ease;
   }
+  .grat-item::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: #7C9885;
+  }
+  .grat-item:nth-child(2)::before { background: #C29B54; }
+  .grat-item:nth-child(3)::before { background: #CE8A6A; }
+  .grat-item:nth-child(4)::before { background: #7C3A44; }
+  .grat-item:nth-child(5)::before { background: #5F7D6A; }
+  .grat-item:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(59,55,47,.06), 0 20px 40px rgba(59,55,47,.1); }
   .grat-item h3 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.3rem; font-weight: 600; line-height: 1.15;
-    margin: 0 0 .45rem; color: #5F7D6A;
+    font-size: 1.38rem; font-weight: 600; line-height: 1.15;
+    margin: .3rem 0 .5rem; color: #5F7D6A; text-wrap: balance;
   }
-  .grat-item p { margin: 0; color: #6f6a5e; font-size: .96rem; line-height: 1.6; }
+  .grat-item p { margin: 0; color: #6f6a5e; font-size: .97rem; line-height: 1.62; }
   .grat-close {
+    position: relative;
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(1.35rem, 3vw, 1.7rem); font-style: italic;
+    font-size: clamp(1.45rem, 3.2vw, 1.85rem); font-style: italic;
     line-height: 1.35; text-align: center; text-wrap: balance;
-    max-width: 44ch; margin: 2.6rem auto 0; color: #3B372F;
+    max-width: 46ch; margin: 3rem auto 0; padding-top: 2rem; color: #3B372F;
   }
-  .grat-soon { text-align: center; margin: 1.6rem 0 0; color: #7c766a; font-size: .95rem; }
-  .grat-soon a { color: #C29B54; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(194,155,84,.4); }
+  .grat-close::before {
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 3px; border-radius: 2px; background: #C29B54;
+  }
+  .grat-soon {
+    text-align: center; margin: 1.8rem auto 0; color: #7c766a; font-size: .96rem;
+    background: rgba(124,152,133,.09); border: 1px solid rgba(124,152,133,.22);
+    border-radius: 999px; padding: .7rem 1.5rem; width: fit-content; max-width: 100%;
+  }
+  .grat-soon a { color: #C29B54; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(194,155,84,.45); }
   .grat-soon a:hover { border-bottom-color: #C29B54; }
+  @media (prefers-reduced-motion: reduce) { .grat-item { transition: none; } .grat-item:hover { transform: none; } }
 </style>
