@@ -21,7 +21,22 @@ export const t = {
       description:
         'Canciones para el corazón que sostiene la mano que otros soltaron. Películas musicales para cuidadores, en español. Por Roxana Grecia.',
     },
-    nav: { films: 'Las canciones', story: 'Mi historia', share: 'Comparte', gift: 'Regalo', shop: 'Tienda' },
+    nav: { films: 'Las canciones', story: 'Mi historia', gratitude: 'Gratitud', share: 'Comparte', gift: 'Regalo', shop: 'Tienda' },
+    gratitude: {
+      eyebrow: 'Gratitud',
+      heading: 'Agradecer, aun cuando duele',
+      intro: 'Agradecer cuando todo va bien es fácil. Agradecer cuando la vida pesa, cuando el cansancio te vence, cuando el miedo aprieta... eso es un acto de valentía. Y se puede aprender, despacito.',
+      practices: [
+        { t: 'Empieza por una sola cosa', d: 'No busques agradecer todo. Busca una cosa pequeña hoy: un café caliente, un rayo de sol, una respiración tranquila. Una sola basta.' },
+        { t: 'Agradece el privilegio de estar', d: 'Sostener esa mano, estar presente en lo difícil. No todos alcanzan a amar hasta el final. Tú sí.' },
+        { t: 'Escribe tres cosas cada noche', d: 'Antes de dormir, anota tres cosas buenas del día, por mínimas que sean. La gratitud crece cuando la escribes.' },
+        { t: 'Encuentra a Dios en lo pequeño', d: 'Un día más. Un abrazo. Una sonrisa entre la niebla. La fe no quita la tormenta, pero nos da dónde sostenernos dentro de ella.' },
+        { t: 'Permítete no agradecer a veces', d: 'La gratitud no borra el dolor, y está bien sentir los dos. Sé tan gentil contigo como lo eres con quien amas.' },
+      ],
+      close: 'Agradecer no cambia lo difícil de tu día. Cambia el corazón con el que lo caminas. Y tú nunca estás sola.',
+      soon: 'Pronto: tarjetas de gratitud para tus días difíciles.',
+      giftLink: 'Recibe las primeras gratis',
+    },
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
@@ -143,7 +158,22 @@ export const t = {
       description:
         'Songs for the heart that holds the hand others let go of. Musical films for caregivers. By Roxana Grecia.',
     },
-    nav: { films: 'The songs', story: 'My story', share: 'Share', gift: 'Gift', shop: 'Shop' },
+    nav: { films: 'The songs', story: 'My story', gratitude: 'Gratitude', share: 'Share', gift: 'Gift', shop: 'Shop' },
+    gratitude: {
+      eyebrow: 'Gratitude',
+      heading: 'Gratitude, even when it hurts',
+      intro: 'Being grateful when life is good is easy. Being grateful when the weight is heavy, when exhaustion wins, when fear tightens its grip... that is an act of courage. And it can be learned, gently.',
+      practices: [
+        { t: 'Start with just one thing', d: 'Do not try to be grateful for everything. Find one small thing today: a warm coffee, a ray of sun, a calm breath. One is enough.' },
+        { t: 'Give thanks for the privilege of being there', d: 'To hold that hand, to be present in the hard moments. Not everyone gets to love to the very end. You do.' },
+        { t: 'Write three things every night', d: 'Before you sleep, write down three good things from the day, however small. Gratitude grows when you write it.' },
+        { t: 'Find God in the small things', d: 'One more day. A hug. A smile through the fog. Faith does not take away the storm, but it gives us something to hold on to inside it.' },
+        { t: 'Let yourself not be grateful sometimes', d: 'Gratitude does not erase the pain, and it is okay to feel both. Be as gentle with yourself as you are with those you love.' },
+      ],
+      close: 'Gratitude does not change how hard your day is. It changes the heart you walk through it with. And you are never alone.',
+      soon: 'Coming soon: gratitude cards for your hardest days.',
+      giftLink: 'Get the first ones free',
+    },
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',

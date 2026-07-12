@@ -12,6 +12,7 @@ const { t } = Astro.props;
       <div class="nav-links">
         <a href="#peliculas">{t.nav.films}</a>
         <a href="#historia">{t.nav.story}</a>
+        <a href="#gratitud">{t.nav.gratitude}</a>
         <a href="#comparte">{t.nav.share}</a>
         <a href="#regalo">{t.nav.gift}</a>
         <a href="#tienda">{t.nav.shop}</a>
@@ -95,6 +96,25 @@ const { t } = Astro.props;
     </div>
   </section>
 
+  <!-- GRATITUDE -->
+  <section id="gratitud" class="gratitude">
+    <div class="container">
+      <p class="eyebrow reveal">{t.gratitude.eyebrow}</p>
+      <h2 class="section-title reveal">{t.gratitude.heading}</h2>
+      <p class="intro reveal">{t.gratitude.intro}</p>
+      <ul class="grat-list">
+        {t.gratitude.practices.map((p) => (
+          <li class="grat-item reveal">
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="grat-close reveal">{t.gratitude.close}</p>
+      <p class="grat-soon reveal">{t.gratitude.soon} <a href="#regalo">{t.gratitude.giftLink}</a></p>
+    </div>
+  </section>
+
   <!-- SHARE YOUR STORY -->
   <section id="comparte" class="share">
     <div class="container">
@@ -155,3 +175,32 @@ const { t } = Astro.props;
     <small class="flegal">{t.footer.legal}</small>
   </div>
 </footer>
+
+<style>
+  .gratitude { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+  .grat-list {
+    list-style: none; margin: 2.2rem 0 0; padding: 0;
+    display: grid; gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .grat-item {
+    background: #FFFDF8; border: 1px solid #E7DDCA; border-radius: 16px;
+    padding: 1.35rem 1.45rem;
+    box-shadow: 0 1px 2px rgba(59,55,47,.05), 0 10px 26px rgba(59,55,47,.06);
+  }
+  .grat-item h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem; font-weight: 600; line-height: 1.15;
+    margin: 0 0 .45rem; color: #5F7D6A;
+  }
+  .grat-item p { margin: 0; color: #6f6a5e; font-size: .96rem; line-height: 1.6; }
+  .grat-close {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.35rem, 3vw, 1.7rem); font-style: italic;
+    line-height: 1.35; text-align: center; text-wrap: balance;
+    max-width: 44ch; margin: 2.6rem auto 0; color: #3B372F;
+  }
+  .grat-soon { text-align: center; margin: 1.6rem 0 0; color: #7c766a; font-size: .95rem; }
+  .grat-soon a { color: #C29B54; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(194,155,84,.4); }
+  .grat-soon a:hover { border-bottom-color: #C29B54; }
+</style>
