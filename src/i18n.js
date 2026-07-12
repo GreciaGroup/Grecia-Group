@@ -17,7 +17,7 @@ export const t = {
     otherHref: '/en/',
     otherLabel: 'EN',
     meta: {
-      title: 'Grecia Group — Un santuario para quienes cuidan',
+      title: 'Grecia Group — Un santuario para quienes cuidan a quien se ama',
       description:
         'Canciones para el corazón que sostiene la mano que otros soltaron. Películas musicales para cuidadores, en español. Por Roxana Grecia.',
     },
@@ -40,7 +40,7 @@ export const t = {
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
-      tagline: 'Un santuario para quienes cuidan.',
+      tagline: 'Un santuario para quienes cuidan a quien se ama.',
       sub: 'Canciones para el corazón que sostiene la mano que otros soltaron.',
       ctaPrimary: 'Únete al santuario',
       ctaSecondary: 'Escuchar las canciones',
@@ -154,7 +154,7 @@ export const t = {
     otherHref: '/',
     otherLabel: 'ES',
     meta: {
-      title: 'Grecia Group — A sanctuary for those who care',
+      title: 'Grecia Group — A sanctuary for those who care for someone they love',
       description:
         'Songs for the heart that holds the hand others let go of. Musical films for caregivers. By Roxana Grecia.',
     },
@@ -177,7 +177,7 @@ export const t = {
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
-      tagline: 'A sanctuary for those who care.',
+      tagline: 'A sanctuary for those who care for someone they love.',
       sub: 'Songs for the heart that holds the hand others let go of.',
       ctaPrimary: 'Join the sanctuary',
       ctaSecondary: 'Listen to the songs',
