@@ -19,14 +19,14 @@ export const t = {
     meta: {
       title: 'Grecia Group — Un santuario para quienes cuidan',
       description:
-        'Canciones para el corazon que sostiene la mano que otros soltaron. Peliculas musicales para cuidadores, en espanol. Por Roxana Grecia.',
+        'Canciones para el corazón que sostiene la mano que otros soltaron. Películas musicales para cuidadores, en español. Por Roxana Grecia.',
     },
     nav: { films: 'Las canciones', story: 'Mi historia', share: 'Comparte', gift: 'Regalo', shop: 'Tienda' },
     hero: {
       brand: 'Grecia Group',
       title: 'Tender Heart Rhythms',
       tagline: 'Un santuario para quienes cuidan.',
-      sub: 'Canciones para el corazon que sostiene la mano que otros soltaron.',
+      sub: 'Canciones para el corazón que sostiene la mano que otros soltaron.',
       ctaPrimary: 'Únete al santuario',
       ctaSecondary: 'Escuchar las canciones',
     },
@@ -35,19 +35,19 @@ export const t = {
       intro:
         'Seis canciones originales, hechas de fotos reales de familia y letras que se sienten en el pecho. Cada una es una carta de amor para quien cuida.',
       titles: {
-        1: 'Mi Heroe, Mi Pilar',
-        2: 'Tu Mano en la Mia',
-        3: 'Papa, ya no se quien soy',
+        1: 'Mi Héroe, Mi Pilar',
+        2: 'Tu Mano en la Mía',
+        3: 'Papá, ya no sé quién soy',
         4: 'Cuidarte es Salvarme',
         5: 'Tu Sonrisa en la Niebla',
         6: 'Mi Libertad en tus Ojos',
       },
       dedications: {
-        1: 'Para mi padre. Se fue en 15 dias. Esta cancion es mi promesa.',
+        1: 'Para mi padre. Se fue en 15 días. Esta canción es mi promesa.',
         2: 'Para mi madre. Cuando la niebla amenaza a mamá, el amor no se olvida.',
-        3: 'Cuando cuidas a todos, quien te cuida a ti.',
-        4: 'Nadie aplaude al que cuida. Esta cancion, si.',
-        5: 'Busco tu sonrisa, papa, en cada amanecer.',
+        3: 'Cuando cuidas a todos, ¿quién te cuida a ti?',
+        4: 'Nadie aplaude al que cuida. Esta canción, sí.',
+        5: 'Busco tu sonrisa, papá, en cada amanecer.',
         6: 'Dicen que soy prisionera. No saben que soy libre.',
       },
       comingSoon: 'Muy pronto',
@@ -97,7 +97,7 @@ export const t = {
       heading: 'La tienda',
       intro: 'Recursos para acompañar tu camino de cuidado.',
       etsy: 'Ver en Etsy',
-      soon: 'Mas productos muy pronto',
+      soon: 'Más productos muy pronto',
       customLink: 'Tu Canción personalizada',
     },
     custom: {
