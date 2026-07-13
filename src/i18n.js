@@ -71,14 +71,14 @@ export const t = {
         privacy: 'Sin spam. Solo consuelo. Puedes salir cuando quieras.',
       },
       decks: {
-        heading: 'Muy pronto: el mazo completo',
-        intro: 'Estoy creando un mazo de 52 cartas de gratitud, bilingüe y con fe. Una carta para cada semana del año, con arte cálido y palabras que se sienten en el pecho. Pensado para ti, o para regalar con alma.',
+        heading: 'Muy pronto: la colección completa',
+        intro: 'Colección de 52 tarjetas de gratitud y fe, una para cada semana del año. Cada tarjeta combina arte cálido, palabras que abrazan el corazón y mensajes para acompañarte en los días buenos y en los días difíciles. Creadas para ti o para regalar con amor.',
         items: [
-          { t: 'Mazo imprimible', d: '52 cartas bilingües para descargar e imprimir en casa.', badge: 'Muy pronto' },
-          { t: 'Mazo físico', d: 'Las 52 cartas impresas, listas para regalar.', badge: 'Muy pronto' },
+          { t: 'Colección imprimible', d: '52 tarjetas bilingües para descargar e imprimir en casa.', badge: 'Muy pronto' },
+          { t: 'Colección física', d: 'Las 52 tarjetas impresas y cuidadosamente preparadas para regalar.', badge: 'Muy pronto' },
         ],
-        meanwhile: 'Mientras tanto, ya puedes encontrar Calma, nuestro mazo de afirmaciones, en Etsy.',
-        etsy: 'Descubre un rincón de calma en Etsy',
+        meanwhile: 'Mientras tanto, descubre Calma, nuestra colección de afirmaciones, en Etsy.',
+        etsy: 'Descubrir Calma en Etsy',
       },
       faith: {
         verse: '«A veces la vida no cambia de inmediato, pero la gratitud transforma la manera en que la abrazamos.»',
@@ -258,14 +258,14 @@ export const t = {
         privacy: 'No spam. Only comfort. Leave anytime.',
       },
       decks: {
-        heading: 'Coming soon: the full deck',
-        intro: 'I am creating a deck of 52 gratitude cards, bilingual and faith-rooted. One card for every week of the year, with warm art and words you feel in your chest. Made for you, or to give as a gift with soul.',
+        heading: 'Coming Soon: The Complete Collection',
+        intro: 'I am creating a bilingual collection of 52 gratitude and faith cards: one for every week of the year. Each card brings together warm, meaningful artwork, comforting words, and messages created to support you through both joyful seasons and difficult days. Made for your own quiet moments of reflection, or to give as a heartfelt gift.',
         items: [
-          { t: 'Printable deck', d: '52 bilingual cards to download and print at home.', badge: 'Coming soon' },
-          { t: 'Physical deck', d: 'All 52 cards printed, ready to gift.', badge: 'Coming soon' },
+          { t: 'Printable Collection', d: '52 bilingual cards to download and print at home.', badge: 'Coming soon' },
+          { t: 'Physical Collection', d: 'All 52 cards professionally printed and beautifully prepared for gifting.', badge: 'Coming soon' },
         ],
-        meanwhile: 'In the meantime, you can already find Calm, our affirmation deck, on Etsy.',
-        etsy: 'Discover a corner of calm on Etsy',
+        meanwhile: 'In the meantime, discover Calma, our affirmation card collection, on Etsy.',
+        etsy: 'Discover Calma on Etsy',
       },
       faith: {
         verse: '"Sometimes life does not change right away, but gratitude transforms the way we embrace it."',
