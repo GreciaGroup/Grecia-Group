@@ -1,0 +1,138 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n.js';
+const tr = t.es;
+
+const cards = [
+  { img: '1-una-sola-cosa', es: 'Hoy agradezco una sola cosa. Con una basta.' },
+  { img: '2-el-pan-el-techo-la-luz', es: 'Gracias por este día: el pan, el techo, la luz.' },
+  { img: '3-sostener-tu-mano', es: 'Sostener tu mano es un privilegio. Gracias.' },
+  { img: '4-la-niebla', es: 'La niebla no borra el amor. Gracias por lo que permanece.' },
+  { img: '5-la-fuerza', es: 'Gracias, Dios, por la fuerza que no sabía que tenía.' },
+  { img: '6-esta-bien', es: 'Hoy no puedo agradecer mucho. Y está bien.' },
+  { img: '7-un-gracias-susurrado', es: 'Un gracias susurrado también llega al cielo.' },
+];
+
+const fondos = [
+  { img: 'fondo-una-sola-cosa', t: 'Una sola cosa' },
+  { img: 'fondo-esta-bien', t: 'Y está bien' },
+  { img: 'fondo-gracias-susurrado', t: 'Un gracias susurrado' },
+];
+---
+<Base title="Tu regalo · 7 Tarjetas de Gratitud | Tender Heart Rhythms" description="Tus 7 tarjetas de gratitud, en español e inglés, con fe. Guarda o imprime la que tu corazón necesite hoy." lang="es" canonical="https://greciagroup.com/regalo">
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="/" translate="no">
+        {tr.brand.main}
+        <span>{tr.brand.sub}</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="gift-page">
+    <!-- HERO -->
+    <section class="prod-hero">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow reveal">Tu regalo</p>
+        <h1 class="reveal">Tus 7 tarjetas de gratitud</h1>
+        <p class="prod-tagline reveal">Bienvenida a nuestro espacio de gratitud.</p>
+        <p class="prod-intro reveal">Aquí están, hechas con fe y con mucho cariño para acompañarte en los días difíciles y en los buenos. En español y en inglés. Guarda o imprime la que tu corazón necesite hoy.</p>
+      </div>
+    </section>
+
+    <!-- INDIVIDUAL CARDS -->
+    <section class="gcards">
+      <div class="container">
+        <h2 class="section-title reveal">Elige la que hoy te habla</h2>
+        <p class="gintro reveal">Toca cualquier tarjeta para guardarla, imprimirla o compartirla, una sola. En los días más pesados, empieza por la número 6. Está escrita para ti.</p>
+        <div class="card-grid">
+          {cards.map((c, i) => (
+            <a class="gcard reveal" href={`/regalo/tarjetas/${c.img}.png`} download target="_blank" rel="noopener" aria-label={c.es}>
+              <img src={`/regalo/tarjetas/${c.img}.png`} width="500" height="700" alt={c.es} loading="lazy" decoding="async" />
+              <span class="gdl">Guardar tarjeta {i + 1}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL TOGETHER -->
+    <section class="gall">
+      <div class="container">
+        <h2 class="section-title reveal">¿Las quieres todas juntas?</h2>
+        <p class="gintro reveal">Descarga el juego completo. Una para verlas en tu teléfono, otra lista para imprimir y recortar en casa.</p>
+        <div class="gall-actions reveal">
+          <a class="btn btn-primary" href="/regalo/7-tarjetas-de-gratitud.pdf" download target="_blank" rel="noopener">Ver las 7 juntas (PDF)</a>
+          <a class="btn btn-ghost" href="/regalo/7-tarjetas-imprimir.pdf" download target="_blank" rel="noopener">Imprimir y recortar (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WALLPAPERS -->
+    <section class="gfondos">
+      <div class="container">
+        <h2 class="section-title reveal">Para tu teléfono</h2>
+        <p class="gintro reveal">Tres fondos de pantalla, para que la gratitud te acompañe cada vez que miras tu celular.</p>
+        <div class="fondo-grid">
+          {fondos.map((f) => (
+            <a class="fondo reveal" href={`/regalo/fondos/${f.img}.png`} download target="_blank" rel="noopener" aria-label={`Fondo: ${f.t}`}>
+              <img src={`/regalo/fondos/${f.img}.png`} width="1080" height="1920" alt={`Fondo de pantalla: ${f.t}`} loading="lazy" decoding="async" />
+              <span class="gdl">Guardar fondo</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section class="gclose-sec">
+      <div class="container">
+        <p class="gclose reveal">La gratitud no cambia lo difícil de tu día. Cambia el corazón con el que lo caminas. Y tú nunca caminas sola.</p>
+        <p class="gdisc reveal">La gratitud está vinculada a mayor bienestar. No cura ni trata ninguna condición. Con amor, de creadora a corazón que cuida.</p>
+        <div class="gcta reveal">
+          <a class="btn-text" href="/">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fbrand" translate="no">{tr.brand.main}</p>
+      <p class="fsub" translate="no">{tr.brand.sub}</p>
+      <div class="social">
+        <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/tenderheartrhythms" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@tenderheart.rhythms" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.pinterest.com/greciagroup" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">Etsy</a>
+      </div>
+      <small>&copy; {new Date().getFullYear()} {tr.footer.brand}. {tr.footer.rights}</small>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  .gintro { max-width: 56ch; color: #8A6A48; font-size: 1.08rem; margin: 0 auto 0.5rem; text-align: center; }
+  .gcards { background: var(--cream); text-align: center; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.4rem; margin-top: 2.4rem; }
+  .gcard { position: relative; display: block; border-radius: 14px; overflow: hidden; text-decoration: none; box-shadow: var(--shadow); border: 1px solid var(--sand); transition: transform .28s ease, box-shadow .28s ease; }
+  .gcard img { display: block; width: 100%; height: auto; }
+  .gcard:hover { transform: translateY(-5px); box-shadow: 0 26px 52px -26px rgba(86,110,92,.55); }
+  .gdl { display: block; background: rgba(253,249,238,.96); color: var(--sage-dk); font-family: var(--font-sans); font-weight: 700; font-size: .85rem; padding: .7rem; letter-spacing: .02em; }
+
+  .gall { background: var(--ivory); text-align: center; }
+  .gall-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+
+  .gfondos { background: var(--cream); text-align: center; }
+  .fondo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 220px)); gap: 1.4rem; margin-top: 2.4rem; justify-content: center; }
+  .fondo { position: relative; display: block; border-radius: 20px; overflow: hidden; text-decoration: none; box-shadow: var(--shadow); border: 1px solid var(--sand); transition: transform .28s ease; }
+  .fondo img { display: block; width: 100%; height: auto; }
+  .fondo:hover { transform: translateY(-5px); }
+
+  .gclose-sec { background: linear-gradient(180deg, var(--cream), var(--ivory)); text-align: center; padding-block: clamp(3.5rem, 9vw, 6rem); }
+  .gclose { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.4; color: var(--sage-dk); max-width: 40ch; margin: 0 auto 1.6rem; text-wrap: balance; }
+  .gdisc { max-width: 60ch; margin: 0 auto 1.8rem; font-size: .82rem; font-style: italic; color: #8a8478; }
+</style>
