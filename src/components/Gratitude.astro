@@ -75,7 +75,7 @@ const g = t.gratPage;
       <h2 class="section-title reveal">{g.gift.heading}</h2>
       <p class="sub reveal">{g.gift.sub}</p>
       <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
-      <form class="reveal" name="gratitude" data-ghl="pending" onsubmit="return false;">
+      <form class="reveal" name="gratitude" data-ghl="gratitude">
         <input type="email" name="email" placeholder={g.gift.placeholder} required aria-label={g.gift.placeholder} />
         <button class="btn btn-primary" type="submit">{g.gift.button}</button>
       </form>

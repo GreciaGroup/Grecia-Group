@@ -6,6 +6,11 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Serverless functions (form submissions -> GoHighLevel)
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Security + performance headers
 [[headers]]
   for = "/*"

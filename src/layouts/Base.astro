@@ -97,6 +97,64 @@ const schema = {
       })();
     </script>
     <script>
+      // ---- Form submissions -> GoHighLevel (via Netlify function) ----
+      (() => {
+        const es = document.documentElement.lang !== 'en';
+        const msg = {
+          sending: es ? 'Enviando...' : 'Sending...',
+          okGift: es ? 'Gracias. Revisa tu correo para recibir tu regalo. Con amor.' : 'Thank you. Check your email for your gift. With love.',
+          okStory: es ? 'Gracias por confiarme tu historia. La leo con el corazon.' : 'Thank you for trusting me with your story. I read every one with my heart.',
+          error: es ? 'No se pudo enviar ahora. Intenta de nuevo en un momento.' : 'Could not send right now. Please try again in a moment.',
+          invalid: es ? 'Por favor escribe un correo valido.' : 'Please enter a valid email.',
+        };
+        const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v || '').trim());
+
+        document.querySelectorAll('form[data-ghl]').forEach((form) => {
+          const key = form.getAttribute('data-ghl');
+          if (!key || key === 'pending') return;
+
+          let status = form.querySelector('.form-status');
+          if (!status) {
+            status = document.createElement('p');
+            status.className = 'form-status';
+            status.setAttribute('role', 'status');
+            status.setAttribute('aria-live', 'polite');
+            form.appendChild(status);
+          }
+
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = form.querySelector('[name="email"]')?.value || '';
+            const name = form.querySelector('[name="name"]')?.value || '';
+            const story = form.querySelector('[name="story"]')?.value || '';
+            if (!isEmail(email)) { status.textContent = msg.invalid; status.dataset.state = 'error'; return; }
+
+            const btn = form.querySelector('button[type="submit"], button:not([type])');
+            const btnLabel = btn?.textContent;
+            if (btn) { btn.disabled = true; btn.textContent = msg.sending; }
+            status.dataset.state = ''; status.textContent = '';
+
+            try {
+              const res = await fetch('/.netlify/functions/ghl-lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ form: key, email, name, story }),
+              });
+              if (!res.ok) throw new Error('bad response');
+              form.reset();
+              status.textContent = key === 'story' ? msg.okStory : msg.okGift;
+              status.dataset.state = 'ok';
+            } catch {
+              status.textContent = msg.error;
+              status.dataset.state = 'error';
+            } finally {
+              if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+            }
+          });
+        });
+      })();
+    </script>
+    <script>
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const finePointer = window.matchMedia('(pointer: fine)').matches;
 

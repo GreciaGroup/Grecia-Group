@@ -102,7 +102,7 @@ const { t } = Astro.props;
       <h2 class="section-title reveal">{t.share.heading}</h2>
       <p class="share-sub reveal">{t.share.sub}</p>
       <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
-      <form class="share-form reveal" name="story" data-ghl="pending" onsubmit="return false;">
+      <form class="share-form reveal" name="story" data-ghl="story">
         <input type="text" name="name" placeholder={t.share.namePlaceholder} aria-label={t.share.namePlaceholder} required />
         <input type="email" name="email" placeholder={t.share.emailPlaceholder} aria-label={t.share.emailPlaceholder} required />
         <textarea name="story" rows="5" placeholder={t.share.storyPlaceholder} aria-label={t.share.storyPlaceholder} required></textarea>
@@ -141,7 +141,7 @@ const { t } = Astro.props;
       <h2 class="section-title reveal">{t.gift.heading}</h2>
       <p class="sub reveal">{t.gift.sub}</p>
       <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
-      <form class="reveal" name="signup" data-ghl="pending" onsubmit="return false;">
+      <form class="reveal" name="signup" data-ghl="gift">
         <input type="email" name="email" placeholder={t.gift.placeholder} required aria-label={t.gift.placeholder} />
         <button class="btn btn-primary" type="submit">{t.gift.button}</button>
       </form>
