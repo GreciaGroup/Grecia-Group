@@ -115,6 +115,7 @@ const g = t.gratPage;
         <a class="btn btn-primary" href="#regalo-gratitud">{g.ctaGift}</a>
         <a class="btn-text" href={home}>{g.faith.back}</a>
       </div>
+      <p class="gdisclaimer reveal">{t.gratitude.disclaimer}</p>
     </div>
   </section>
 </main>
@@ -214,6 +215,8 @@ const g = t.gratPage;
   .gref { margin-top: 0.6rem; font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); font-weight: 700; }
   .grule { display: block; width: 54px; height: 2px; margin: 1.6rem auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
   .gclose { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(1.3rem, 2.8vw, 1.7rem); line-height: 1.45; color: var(--ink); max-width: 44ch; margin: 0 auto 2.2rem; text-wrap: balance; }
+
+  .gdisclaimer { max-width: 62ch; margin: 2.4rem auto 0; font-size: .82rem; font-style: italic; color: #8a8478; }
 
   @media (prefers-reduced-motion: reduce) {
     .gp-item { transition: none; }

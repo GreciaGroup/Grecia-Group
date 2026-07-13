@@ -115,6 +115,7 @@ const { t } = Astro.props;
       <div class="grat-page-cta reveal">
         <a class="btn btn-ghost" href={t.lang === 'es' ? '/gratitud' : '/en/gratitude'}>{t.gratitude.pageLink}</a>
       </div>
+      <p class="grat-disclaimer reveal">{t.gratitude.disclaimer}</p>
     </div>
   </section>
 
@@ -227,5 +228,6 @@ const { t } = Astro.props;
   .grat-soon a { color: #C29B54; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(194,155,84,.45); }
   .grat-soon a:hover { border-bottom-color: #C29B54; }
   .grat-page-cta { text-align: center; margin-top: 1.6rem; }
+  .grat-disclaimer { text-align: center; max-width: 62ch; margin: 1.8rem auto 0; font-size: .82rem; font-style: italic; color: #8a8478; }
   @media (prefers-reduced-motion: reduce) { .grat-item { transition: none; } .grat-item:hover { transform: none; } }
 </style>

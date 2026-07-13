@@ -37,6 +37,7 @@ export const t = {
       soon: 'Pronto: tarjetas de gratitud para tus días difíciles.',
       giftLink: 'Recibe las primeras gratis',
       pageLink: 'Entra al rincón de la gratitud',
+      disclaimer: 'Nota con cariño: la gratitud está vinculada a mayor bienestar, pero no cura ni trata ninguna condición. Comparto esto como creadora, no como terapeuta. Si atraviesas un momento muy oscuro, busca también apoyo profesional.',
     },
     gratPage: {
       metaTitle: 'Gratitud, aun cuando duele | Grecia Group',
@@ -222,6 +223,7 @@ export const t = {
       soon: 'Coming soon: gratitude cards for your hardest days.',
       giftLink: 'Get the first ones free',
       pageLink: 'Step into the gratitude corner',
+      disclaimer: 'A loving note: gratitude is linked to greater wellbeing, but it does not cure or treat any condition. I share this as a creator, not a therapist. If you are walking through a very dark season, please also seek professional support.',
     },
     gratPage: {
       metaTitle: 'Gratitude, even when it hurts | Grecia Group',
