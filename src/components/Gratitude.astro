@@ -7,8 +7,8 @@ const g = t.gratPage;
 <header class="site-header">
   <div class="container">
     <a class="wordmark" href={home}>
-      {t.hero.brand}
-      <span>{t.footer.sub}</span>
+      {t.brand.main}
+      <span>{t.brand.sub}</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a class="lang-toggle" href={t.lang === 'es' ? '/en/gratitude' : '/gratitud'}>{t.otherLabel}</a>
@@ -108,7 +108,7 @@ const g = t.gratPage;
   <section class="gfaith">
     <div class="container">
       <p class="gverse reveal">{g.faith.verse}</p>
-      <p class="gref reveal">{g.faith.ref}</p>
+      {g.faith.ref && <p class="gref reveal">{g.faith.ref}</p>}
       <span class="grule reveal" aria-hidden="true"></span>
       <p class="gclose reveal">{g.faith.close}</p>
       <div class="gcta reveal">
@@ -122,8 +122,8 @@ const g = t.gratPage;
 
 <footer class="site-footer">
   <div class="container">
-    <p class="fbrand">{t.footer.brand}</p>
-    <p class="fsub">{t.footer.sub}</p>
+    <p class="fbrand">{t.brand.main}</p>
+    <p class="fsub">{t.brand.sub}</p>
     <div class="social">
       <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.instagram.com/tenderheartrhythms" target="_blank" rel="noopener">Instagram</a>

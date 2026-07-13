@@ -5,15 +5,15 @@ const { t } = Astro.props;
 <header class="site-header">
   <div class="container">
     <a class="wordmark" href={t.dir}>
-      {t.hero.brand}
-      <span>{t.footer.sub}</span>
+      {t.brand.main}
+      <span>{t.brand.sub}</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <div class="nav-links">
         <a href="#peliculas">{t.nav.films}</a>
         <a href="#historia">{t.nav.story}</a>
-        <a href="#gratitud">{t.nav.gratitude}</a>
         <a href="#comparte">{t.nav.share}</a>
+        <a href="#gratitud">{t.nav.gratitude}</a>
         <a href="#regalo">{t.nav.gift}</a>
         <a href="#tienda">{t.nav.shop}</a>
       </div>
@@ -96,6 +96,22 @@ const { t } = Astro.props;
     </div>
   </section>
 
+  <!-- SHARE YOUR STORY -->
+  <section id="comparte" class="share">
+    <div class="container">
+      <h2 class="section-title reveal">{t.share.heading}</h2>
+      <p class="share-sub reveal">{t.share.sub}</p>
+      <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
+      <form class="share-form reveal" name="story" data-ghl="pending" onsubmit="return false;">
+        <input type="text" name="name" placeholder={t.share.namePlaceholder} aria-label={t.share.namePlaceholder} required />
+        <input type="email" name="email" placeholder={t.share.emailPlaceholder} aria-label={t.share.emailPlaceholder} required />
+        <textarea name="story" rows="5" placeholder={t.share.storyPlaceholder} aria-label={t.share.storyPlaceholder} required></textarea>
+        <button class="btn btn-primary" type="submit">{t.share.button}</button>
+      </form>
+      <p class="share-privacy reveal">{t.share.privacy}</p>
+    </div>
+  </section>
+
   <!-- GRATITUDE -->
   <section id="gratitud" class="gratitude">
     <div class="container">
@@ -116,22 +132,6 @@ const { t } = Astro.props;
         <a class="btn btn-ghost" href={t.lang === 'es' ? '/gratitud' : '/en/gratitude'}>{t.gratitude.pageLink}</a>
       </div>
       <p class="grat-disclaimer reveal">{t.gratitude.disclaimer}</p>
-    </div>
-  </section>
-
-  <!-- SHARE YOUR STORY -->
-  <section id="comparte" class="share">
-    <div class="container">
-      <h2 class="section-title reveal">{t.share.heading}</h2>
-      <p class="share-sub reveal">{t.share.sub}</p>
-      <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
-      <form class="share-form reveal" name="story" data-ghl="pending" onsubmit="return false;">
-        <input type="text" name="name" placeholder={t.share.namePlaceholder} aria-label={t.share.namePlaceholder} required />
-        <input type="email" name="email" placeholder={t.share.emailPlaceholder} aria-label={t.share.emailPlaceholder} required />
-        <textarea name="story" rows="5" placeholder={t.share.storyPlaceholder} aria-label={t.share.storyPlaceholder} required></textarea>
-        <button class="btn btn-primary" type="submit">{t.share.button}</button>
-      </form>
-      <p class="share-privacy reveal">{t.share.privacy}</p>
     </div>
   </section>
 
@@ -166,8 +166,8 @@ const { t } = Astro.props;
 
 <footer class="site-footer">
   <div class="container">
-    <p class="fbrand">{t.footer.brand}</p>
-    <p class="fsub">{t.footer.sub}</p>
+    <p class="fbrand">{t.brand.main}</p>
+    <p class="fsub">{t.brand.sub}</p>
     <div class="social">
       <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.instagram.com/tenderheartrhythms" target="_blank" rel="noopener">Instagram</a>
