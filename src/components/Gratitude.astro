@@ -1,0 +1,222 @@
+---
+// Gratitude landing page: /gratitud (es) + /en/gratitude (en)
+// Blueprint: emotional hero → free value (practices) → The Bridge → gift capture → decks teaser → faith close.
+const { t, home } = Astro.props;
+const g = t.gratPage;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href={home}>
+      {t.hero.brand}
+      <span>{t.footer.sub}</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="lang-toggle" href={t.lang === 'es' ? '/en/gratitude' : '/gratitud'}>{t.otherLabel}</a>
+    </nav>
+  </div>
+</header>
+
+<main class="grat-page">
+  <!-- HERO -->
+  <section class="prod-hero">
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow reveal">{g.eyebrow}</p>
+      <h1 class="reveal">{g.title}</h1>
+      <p class="prod-tagline reveal">{g.tagline}</p>
+      <p class="prod-intro reveal">{g.intro}</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#regalo-gratitud">{g.ctaGift}</a>
+        <a class="btn btn-ghost" href="#practicas">{g.ctaPractices}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICES (free value first) -->
+  <section id="practicas" class="gpractices">
+    <div class="container">
+      <p class="eyebrow reveal">{g.eyebrow}</p>
+      <h2 class="section-title reveal">{g.practicesHeading}</h2>
+      <p class="gintro reveal">{g.practicesIntro}</p>
+      <ul class="gp-list">
+        {t.gratitude.practices.map((p) => (
+          <li class="gp-item reveal">
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE BRIDGE (featured practice for the hardest days) -->
+  <section class="bridge">
+    <div class="container">
+      <p class="eyebrow reveal">{g.bridge.eyebrow}</p>
+      <h2 class="section-title reveal">{g.bridge.heading}</h2>
+      <p class="gintro reveal">{g.bridge.intro}</p>
+      <div class="step-grid">
+        {g.bridge.steps.map((s) => (
+          <div class="step reveal">
+            <span class="step-n">{s.n}</span>
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </div>
+        ))}
+      </div>
+      <p class="bridge-close reveal">{g.bridge.close}</p>
+    </div>
+  </section>
+
+  <!-- GIFT / EMAIL CAPTURE -->
+  <section id="regalo-gratitud" class="gift">
+    <div class="container">
+      <h2 class="section-title reveal">{g.gift.heading}</h2>
+      <p class="sub reveal">{g.gift.sub}</p>
+      <!-- Wired to GoHighLevel after PIT token is set (Netlify env). Placeholder for now. -->
+      <form class="reveal" name="gratitude" data-ghl="pending" onsubmit="return false;">
+        <input type="email" name="email" placeholder={g.gift.placeholder} required aria-label={g.gift.placeholder} />
+        <button class="btn btn-primary" type="submit">{g.gift.button}</button>
+      </form>
+      <p class="privacy reveal">{g.gift.privacy}</p>
+    </div>
+  </section>
+
+  <!-- DECKS TEASER -->
+  <section class="gdecks">
+    <div class="container">
+      <h2 class="section-title reveal">{g.decks.heading}</h2>
+      <p class="gintro reveal">{g.decks.intro}</p>
+      <div class="deck-grid">
+        {g.decks.items.map((d) => (
+          <div class="deck-card reveal">
+            <span class="deck-badge">{d.badge}</span>
+            <h3>{d.t}</h3>
+            <p>{d.d}</p>
+          </div>
+        ))}
+      </div>
+      <p class="meanwhile reveal">{g.decks.meanwhile}</p>
+      <div class="gcta reveal">
+        <a class="btn btn-vino" href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">{g.decks.etsy}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAITH CLOSE -->
+  <section class="gfaith">
+    <div class="container">
+      <p class="gverse reveal">{g.faith.verse}</p>
+      <p class="gref reveal">{g.faith.ref}</p>
+      <span class="grule reveal" aria-hidden="true"></span>
+      <p class="gclose reveal">{g.faith.close}</p>
+      <div class="gcta reveal">
+        <a class="btn btn-primary" href="#regalo-gratitud">{g.ctaGift}</a>
+        <a class="btn-text" href={home}>{g.faith.back}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="fbrand">{t.footer.brand}</p>
+    <p class="fsub">{t.footer.sub}</p>
+    <div class="social">
+      <a href="https://www.youtube.com/@TenderHeartRhythms" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/tenderheartrhythms" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@tenderheart.rhythms" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.pinterest.com/greciagroup" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">Etsy</a>
+    </div>
+    <small>&copy; {new Date().getFullYear()} {t.footer.brand}. {t.footer.rights}</small>
+    <small class="flegal">{t.footer.legal}</small>
+  </div>
+</footer>
+
+<style>
+  .gintro { max-width: 58ch; color: #8A6A48; font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+  /* practices cards (same warm card language as the home gratitude section) */
+  .gpractices { background: var(--cream); padding-block: clamp(3.5rem, 8vw, 6rem); }
+  .gp-list {
+    list-style: none; margin: 2.4rem 0 0; padding: 0;
+    display: grid; gap: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .gp-item {
+    position: relative; overflow: hidden;
+    background: #FFFDF8; border: 1px solid #E7DDCA; border-radius: 18px;
+    padding: 1.5rem 1.5rem 1.55rem;
+    box-shadow: 0 1px 2px rgba(59,55,47,.05), 0 12px 30px rgba(59,55,47,.07);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .gp-item::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: #7C9885;
+  }
+  .gp-item:nth-child(2)::before { background: #C29B54; }
+  .gp-item:nth-child(3)::before { background: #CE8A6A; }
+  .gp-item:nth-child(4)::before { background: #7C3A44; }
+  .gp-item:nth-child(5)::before { background: #5F7D6A; }
+  .gp-item:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(59,55,47,.06), 0 20px 40px rgba(59,55,47,.1); }
+  .gp-item h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.38rem; font-weight: 600; line-height: 1.15;
+    margin: .3rem 0 .5rem; color: #5F7D6A; text-wrap: balance;
+  }
+  .gp-item p { margin: 0; color: #6f6a5e; font-size: .97rem; line-height: 1.62; }
+
+  /* the bridge */
+  .bridge { background: var(--ivory); text-align: center; }
+  .bridge .gintro { margin-inline: auto; }
+  .bridge-close {
+    position: relative;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 1.75rem); font-style: italic;
+    line-height: 1.35; text-align: center; text-wrap: balance;
+    max-width: 40ch; margin: 2.6rem auto 0; padding-top: 1.8rem; color: var(--ink);
+  }
+  .bridge-close::before {
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 3px; border-radius: 2px; background: #C29B54;
+  }
+
+  /* decks teaser */
+  .gdecks { background: var(--cream); text-align: center; }
+  .gdecks .gintro { margin-inline: auto; }
+  .deck-grid {
+    display: grid; gap: 1.4rem; margin-top: 2.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    max-width: 720px; margin-inline: auto;
+  }
+  .deck-card {
+    position: relative; background: var(--ivory); border: 1px solid var(--sand);
+    border-radius: var(--radius); padding: 2.2rem 1.6rem 1.8rem;
+    box-shadow: var(--shadow); text-align: center;
+  }
+  .deck-badge {
+    position: absolute; top: -0.8rem; left: 50%; transform: translateX(-50%);
+    background: var(--sage); color: #fff; font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem;
+    border-radius: 999px; white-space: nowrap;
+  }
+  .deck-card h3 { font-size: 1.4rem; color: var(--wine); margin-bottom: 0.4rem; }
+  .deck-card p { color: #6f6a5e; font-size: 0.97rem; line-height: 1.6; margin: 0; }
+  .meanwhile { margin: 2.2rem auto 1.2rem; max-width: 48ch; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.2rem; color: var(--sage-dk); }
+  .gcta { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+  /* faith close */
+  .gfaith { background: linear-gradient(180deg, var(--cream), var(--ivory)); text-align: center; padding-block: clamp(4.5rem, 11vw, 8rem); }
+  .gfaith .container { max-width: 820px; }
+  .gverse { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(1.5rem, 3.6vw, 2.3rem); line-height: 1.4; color: var(--sage-dk); text-wrap: balance; }
+  .gref { margin-top: 0.6rem; font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); font-weight: 700; }
+  .grule { display: block; width: 54px; height: 2px; margin: 1.6rem auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .gclose { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(1.3rem, 2.8vw, 1.7rem); line-height: 1.45; color: var(--ink); max-width: 44ch; margin: 0 auto 2.2rem; text-wrap: balance; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gp-item { transition: none; }
+    .gp-item:hover { transform: none; }
+  }
+</style>

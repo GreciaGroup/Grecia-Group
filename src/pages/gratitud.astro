@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import Gratitude from '../components/Gratitude.astro';
+import { t } from '../i18n.js';
+const tr = t.es;
+---
+<Base title={tr.gratPage.metaTitle} description={tr.gratPage.metaDesc} lang="es" canonical="https://greciagroup.com/gratitud">
+  <Gratitude t={tr} home="/" />
+</Base>

@@ -112,6 +112,9 @@ const { t } = Astro.props;
       </ul>
       <p class="grat-close reveal">{t.gratitude.close}</p>
       <p class="grat-soon reveal">{t.gratitude.soon} <a href="#regalo">{t.gratitude.giftLink}</a></p>
+      <div class="grat-page-cta reveal">
+        <a class="btn btn-ghost" href={t.lang === 'es' ? '/gratitud' : '/en/gratitude'}>{t.gratitude.pageLink}</a>
+      </div>
     </div>
   </section>
 
@@ -223,5 +226,6 @@ const { t } = Astro.props;
   }
   .grat-soon a { color: #C29B54; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(194,155,84,.45); }
   .grat-soon a:hover { border-bottom-color: #C29B54; }
+  .grat-page-cta { text-align: center; margin-top: 1.6rem; }
   @media (prefers-reduced-motion: reduce) { .grat-item { transition: none; } .grat-item:hover { transform: none; } }
 </style>
