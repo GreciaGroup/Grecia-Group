@@ -20,7 +20,7 @@ export const t = {
     meta: {
       title: 'Grecia Group — Un santuario para quienes cuidan a quien se ama',
       description:
-        'Canciones para el corazón que sostiene la mano que otros soltaron. Películas musicales para cuidadores, en español. Por Roxana Grecia.',
+        'Canciones para el corazón que sostiene la mano que otros soltaron. Películas musicales para cuidadores, en español. Por Roxana.',
     },
     nav: { films: 'Las canciones', story: 'Mi historia', gratitude: 'Gratitud', share: 'Comparte', gift: 'Regalo', shop: 'Tienda' },
     gratitude: {
@@ -140,7 +140,7 @@ export const t = {
         { type: 'closing', text: `Y si tú también cuidas a alguien... quiero que sepas que este abrazo también es para ti. Porque te veo. Porque entiendo ese amor silencioso, ese cansancio que a veces nos gana. Y porque nunca has estado solo. Nunca has estado sola.` },
       ],
       signoff: 'Con todo mi cariño,',
-      name: 'Roxana Grecia',
+      name: 'Roxana',
     },
     share: {
       heading: 'Comparte tu historia',
@@ -207,7 +207,7 @@ export const t = {
     meta: {
       title: 'Grecia Group — A sanctuary for those who care for someone they love',
       description:
-        'Songs for the heart that holds the hand others let go of. Musical films for caregivers. By Roxana Grecia.',
+        'Songs for the heart that holds the hand others let go of. Musical films for caregivers. By Roxana.',
     },
     nav: { films: 'The songs', story: 'My story', gratitude: 'Gratitude', share: 'Share', gift: 'Gift', shop: 'Shop' },
     gratitude: {
@@ -327,7 +327,7 @@ export const t = {
         { type: 'closing', text: `And if you care for someone too... I want you to know that this embrace is for you as well. Because I see you. Because I understand that silent love, that exhaustion that sometimes overtakes us. And because you have never been alone.` },
       ],
       signoff: 'With all my love,',
-      name: 'Roxana Grecia',
+      name: 'Roxana',
     },
     share: {
       heading: 'Share your story',
