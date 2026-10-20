@@ -17,16 +17,16 @@ export const songCheckout = { song: '', video: '', legacy: '' };
 // Etsy products shown in the shop section. Images live in /public/images/products.
 export const products = [
   { key: 'cards-es', img: '/images/products/cards-es.webp', price: '$4.99', url: 'https://www.etsy.com/listing/4598889120',
-    es: { t: '48 Tarjetas de Afirmaciones para Cuidadores', d: 'Descanso, fortaleza, amor y gracia. Imprimibles, en español.' },
+    es: { t: '48 Tarjetas de Afirmaciones para Cuidadores', d: 'Descanso, fortaleza, amor y paz. Imprimibles, en español.' },
     en: { t: '48 Affirmation Cards for Caregivers (Spanish)', d: 'Rest, strength, love and grace. Printable, in Spanish.' } },
   { key: 'cards-en', img: '/images/products/cards-en.webp', price: '$4.99', url: 'https://www.etsy.com/listing/4598872999',
     es: { t: '48 Tarjetas de Afirmaciones (en inglés)', d: 'Las mismas palabras de aliento, en inglés. Imprimibles.' },
     en: { t: '48 Affirmation Cards for Caregivers', d: 'Rest, strength, love and grace. Printable PDF + PNG.' } },
   { key: 'binder-es', img: '/images/products/binder-es.webp', price: '$6.99', url: 'https://www.etsy.com/listing/4598903120',
-    es: { t: 'Carpeta del Cuidador', d: 'Registro diario, medicamentos, signos vitales y citas. PDF rellenable.' },
+    es: { t: 'Agenda del Cuidador', d: 'Registro diario, medicamentos, signos vitales y citas. PDF rellenable.' },
     en: { t: 'Caregiver Care Binder (Spanish)', d: 'Daily log, medications, vitals and appointments. Fillable PDF.' } },
   { key: 'binder-en', img: '/images/products/binder-en.webp', price: '$6.99', url: 'https://www.etsy.com/listing/4598901028',
-    es: { t: 'Carpeta del Cuidador (en inglés)', d: 'La misma carpeta, en inglés. PDF rellenable e imprimible.' },
+    es: { t: 'Agenda del Cuidador (en inglés)', d: 'La misma agenda, en inglés. PDF rellenable e imprimible.' },
     en: { t: 'Caregiver Care Binder', d: 'Daily log, medications, vitals and appointments. Fillable PDF.' } },
 ];
 
