@@ -1,5 +1,5 @@
 ---
-import { films } from '../i18n.js';
+import { films, products } from '../i18n.js';
 const { t } = Astro.props;
 ---
 <header class="site-header">
@@ -158,6 +158,19 @@ const { t } = Astro.props;
       <div class="shop-actions reveal">
         <a class="btn btn-primary" href={t.lang === 'es' ? '/cancion-personalizada' : '/en/custom-song'}>{t.shop.customLink}</a>
         <a class="btn btn-vino" href="https://www.etsy.com/shop/GreciaGroup" target="_blank" rel="noopener">{t.shop.etsy}</a>
+      </div>
+      <h3 class="products-heading reveal">{t.shop.productsHeading}</h3>
+      <div class="product-grid">
+        {(t.lang === 'es' ? products : [products[1], products[0], products[3], products[2]]).map((p) => (
+          <a class="product-card reveal" href={p.url} target="_blank" rel="noopener">
+            <img src={p.img} alt={p[t.lang].t} width="800" height="800" loading="lazy" decoding="async" />
+            <span class="product-body">
+              <span class="product-title">{p[t.lang].t}</span>
+              <span class="product-desc">{p[t.lang].d}</span>
+              <span class="product-foot"><span class="product-price">{p.price}</span><span class="product-buy">{t.shop.buy} &rarr;</span></span>
+            </span>
+          </a>
+        ))}
       </div>
       <small class="soon reveal">{t.shop.soon}</small>
     </div>
