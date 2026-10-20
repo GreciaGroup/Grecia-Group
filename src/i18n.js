@@ -10,6 +10,26 @@ export const films = [
   { id: 6, slug: 'mi-libertad-en-tus-ojos', youtube: '' },
 ];
 
+// Song checkout links (Honor Elevate / Grecia Group payment links).
+// Paste each URL here when ready; empty = button goes to the "Comparte" form.
+export const songCheckout = { song: '', video: '', legacy: '' };
+
+// Etsy products shown in the shop section. Images live in /public/images/products.
+export const products = [
+  { key: 'cards-es', img: '/images/products/cards-es.webp', price: '$4.99', url: 'https://www.etsy.com/listing/4598889120',
+    es: { t: '48 Tarjetas de Afirmaciones para Cuidadores', d: 'Descanso, fortaleza, amor y gracia. Imprimibles, en español.' },
+    en: { t: '48 Affirmation Cards for Caregivers (Spanish)', d: 'Rest, strength, love and grace. Printable, in Spanish.' } },
+  { key: 'cards-en', img: '/images/products/cards-en.webp', price: '$4.99', url: 'https://www.etsy.com/listing/4598872999',
+    es: { t: '48 Tarjetas de Afirmaciones (en inglés)', d: 'Las mismas palabras de aliento, en inglés. Imprimibles.' },
+    en: { t: '48 Affirmation Cards for Caregivers', d: 'Rest, strength, love and grace. Printable PDF + PNG.' } },
+  { key: 'binder-es', img: '/images/products/binder-es.webp', price: '$6.99', url: 'https://www.etsy.com/listing/4598903120',
+    es: { t: 'Carpeta del Cuidador', d: 'Registro diario, medicamentos, signos vitales y citas. PDF rellenable.' },
+    en: { t: 'Caregiver Care Binder (Spanish)', d: 'Daily log, medications, vitals and appointments. Fillable PDF.' } },
+  { key: 'binder-en', img: '/images/products/binder-en.webp', price: '$6.99', url: 'https://www.etsy.com/listing/4598901028',
+    es: { t: 'Carpeta del Cuidador (en inglés)', d: 'La misma carpeta, en inglés. PDF rellenable e imprimible.' },
+    en: { t: 'Caregiver Care Binder', d: 'Daily log, medications, vitals and appointments. Fillable PDF.' } },
+];
+
 export const t = {
   es: {
     lang: 'es',
@@ -77,8 +97,9 @@ export const t = {
           { t: 'Colección imprimible', d: '52 tarjetas bilingües para descargar e imprimir en casa.', badge: 'Muy pronto' },
           { t: 'Colección física', d: 'Las 52 tarjetas impresas y cuidadosamente preparadas para regalar.', badge: 'Muy pronto' },
         ],
-        meanwhile: 'Mientras tanto, descubre Calma, nuestra colección de afirmaciones, en Etsy.',
-        etsy: 'Descubrir Calma en Etsy',
+        meanwhile: 'Mientras tanto, ya puedes llevarte 48 tarjetas de afirmaciones para cuidadores, en español, listas para imprimir.',
+        etsy: 'Ver las tarjetas en Etsy',
+        etsyUrl: 'https://www.etsy.com/listing/4598889120',
       },
       faith: {
         verse: '«A veces la vida no cambia de inmediato, pero la gratitud transforma la manera en que la abrazamos.»',
@@ -164,29 +185,31 @@ export const t = {
       etsy: 'Ver en Etsy',
       soon: 'Más productos muy pronto',
       customLink: 'Tu Canción personalizada',
+      productsHeading: 'Para tu camino de cuidado',
+      buy: 'Ver en Etsy',
     },
     custom: {
       metaTitle: 'Tu Canción — una canción personalizada | Grecia Group',
-      metaDesc: 'Una canción original hecha a mano para honrar a quien amas o a quien cuidas. Canción-tributo personalizada en español, con alma y fe.',
+      metaDesc: 'Una canción original con la letra escrita a partir de tu historia, para honrar a quien amas o a quien cuidas. Canción-tributo personalizada en español, con alma y fe.',
       eyebrow: 'Producto',
       title: 'Tu Canción',
       tagline: 'La historia de tu amor, hecha canción.',
-      intro: 'Una canción original, escrita y producida a mano, para honrar a quien cuidas, a quien perdiste, o a quien llevas en el corazón. No es una canción cualquiera. Es la tuya.',
+      intro: 'Escribo cada letra a partir de tu historia, como cuidadora que también acompañó a sus padres. Tú revisas la letra antes de terminar. La música se produce con herramientas digitales y la cuido detalle por detalle hasta que suene a ustedes. No es una canción cualquiera. Es la tuya.',
       tiersHeading: 'Elige tu canción',
       popularLabel: 'Más elegida',
       tiers: [
-        { name: 'La Canción', price: '$129', popular: false, features: ['Una canción original (2 a 4 min) sobre tu ser querido', 'Escrita a partir de tu historia', 'Revisas la letra antes de finalizar', 'Entrega digital (MP3 + letra) en ~2 semanas'] },
-        { name: 'Canción + Video de Recuerdo', price: '$299', popular: true, features: ['Todo lo de La Canción', 'Un video con tus fotos y la canción', 'Versión horizontal y vertical para compartir', 'Letras en pantalla, estilo cine'] },
-        { name: 'Legado', price: '$499', popular: false, features: ['Todo lo anterior', 'Arte de la letra para enmarcar', 'Entrega prioritaria', 'Una dedicatoria hablada, con tu voz o la mía'] },
+        { key: 'song', name: 'La Canción', price: '$59', popular: false, features: ['Una canción original (2 a 4 min) sobre tu ser querido', 'Letra escrita a partir de tu historia', 'Revisas la letra antes de finalizar', 'Entrega digital (MP3 + letra) en ~7 días'] },
+        { key: 'video', name: 'Canción + Video de Recuerdo', price: '$129', popular: true, features: ['Todo lo de La Canción', 'Un video con tus fotos y la canción', 'Versión horizontal y vertical para compartir', 'Letras en pantalla, estilo cine'] },
+        { key: 'legacy', name: 'Legado', price: '$229', popular: false, features: ['Todo lo anterior', 'Arte de la letra para enmarcar', 'Entrega prioritaria', 'Una dedicatoria hablada, con tu voz o la mía'] },
       ],
       processHeading: 'Cómo funciona',
       steps: [
         { n: '1', t: 'Cuéntame tu historia', d: 'Me compartes quién es esa persona y por qué es especial.' },
-        { n: '2', t: 'La creo con el corazón', d: 'Escribo y produzco tu canción a partir de tu historia.' },
+        { n: '2', t: 'La creo con el corazón', d: 'Escribo la letra a partir de tu historia y produzco la música con herramientas digitales.' },
         { n: '3', t: 'Tú apruebas', d: 'Te envío la letra y un adelanto antes de finalizar.' },
         { n: '4', t: 'La recibes para siempre', d: 'Tu canción, tuya para escuchar y compartir cuando quieras.' },
       ],
-      scarcity: 'Hechas a mano, con el corazón. Solo acepto unas pocas cada mes.',
+      scarcity: 'Cada letra, escrita con el corazón. Solo acepto unas pocas cada mes. Primeras 10 canciones: La Canción a $49.',
       cta: 'Solicitar mi canción',
       back: 'Volver al inicio',
     },
@@ -264,8 +287,9 @@ export const t = {
           { t: 'Printable Collection', d: '52 bilingual cards to download and print at home.', badge: 'Coming soon' },
           { t: 'Physical Collection', d: 'All 52 cards professionally printed and beautifully prepared for gifting.', badge: 'Coming soon' },
         ],
-        meanwhile: 'In the meantime, discover Calma, our affirmation card collection, on Etsy.',
-        etsy: 'Discover Calma on Etsy',
+        meanwhile: 'In the meantime, you can already take home 48 printable affirmation cards for caregivers.',
+        etsy: 'See the cards on Etsy',
+        etsyUrl: 'https://www.etsy.com/listing/4598872999',
       },
       faith: {
         verse: '"Sometimes life does not change right away, but gratitude transforms the way we embrace it."',
@@ -351,29 +375,31 @@ export const t = {
       etsy: 'View on Etsy',
       soon: 'More products coming soon',
       customLink: 'Your personalized Song',
+      productsHeading: 'For your caregiving journey',
+      buy: 'View on Etsy',
     },
     custom: {
       metaTitle: 'Your Song — a personalized song | Grecia Group',
-      metaDesc: 'An original, handmade song to honor someone you love or care for. A personalized tribute song, made with soul and faith.',
+      metaDesc: 'An original song with lyrics written from your story, to honor someone you love or care for. A personalized tribute song, made with soul and faith.',
       eyebrow: 'Product',
       title: 'Your Song',
       tagline: 'The story of your love, made into a song.',
-      intro: 'An original song, written and produced by hand, to honor someone you care for, someone you lost, or someone you carry in your heart. Not just any song. Yours.',
+      intro: 'I write every lyric from your story, as a caregiver who walked this road with my own parents. You review the lyrics before we finish. The music is produced with digital tools, and I shape it until it sounds like the two of you. Not just any song. Yours.',
       tiersHeading: 'Choose your song',
       popularLabel: 'Most chosen',
       tiers: [
-        { name: 'The Song', price: '$129', popular: false, features: ['An original song (2 to 4 min) about your loved one', 'Written from your story', 'You review the lyrics before it is finalized', 'Digital delivery (MP3 + lyrics) in ~2 weeks'] },
-        { name: 'Song + Memory Video', price: '$299', popular: true, features: ['Everything in The Song', 'A video with your photos and the song', 'Horizontal and vertical versions to share', 'On-screen lyrics, cinematic style'] },
-        { name: 'Legacy', price: '$499', popular: false, features: ['Everything above', 'Framed lyric art', 'Priority delivery', 'A spoken dedication, in your voice or mine'] },
+        { key: 'song', name: 'The Song', price: '$59', popular: false, features: ['An original song (2 to 4 min) about your loved one', 'Lyrics written from your story', 'You review the lyrics before it is finalized', 'Digital delivery (MP3 + lyrics) in ~7 days'] },
+        { key: 'video', name: 'Song + Memory Video', price: '$129', popular: true, features: ['Everything in The Song', 'A video with your photos and the song', 'Horizontal and vertical versions to share', 'On-screen lyrics, cinematic style'] },
+        { key: 'legacy', name: 'Legacy', price: '$229', popular: false, features: ['Everything above', 'Framed lyric art', 'Priority delivery', 'A spoken dedication, in your voice or mine'] },
       ],
       processHeading: 'How it works',
       steps: [
         { n: '1', t: 'Tell me your story', d: 'You share who this person is and why they are special.' },
-        { n: '2', t: 'I create it with my heart', d: 'I write and produce your song from your story.' },
+        { n: '2', t: 'I create it with my heart', d: 'I write the lyrics from your story and produce the music with digital tools.' },
         { n: '3', t: 'You approve it', d: 'I send you the lyrics and a preview before finalizing.' },
         { n: '4', t: 'It is yours forever', d: 'Your song, to listen to and share whenever you wish.' },
       ],
-      scarcity: 'Made by hand, with the heart. I only accept a few each month.',
+      scarcity: 'Every lyric written with the heart. I only accept a few each month. First 10 songs: The Song for $49.',
       cta: 'Request my song',
       back: 'Back to home',
     },
