@@ -1,6 +1,7 @@
 ---
 // Product page: "Tu Canción" personalized song
 const { t, home, commerceHref } = Astro.props;
+import { songCheckout } from '../i18n.js';
 const c = t.custom;
 ---
 <header class="site-header">
@@ -42,7 +43,7 @@ const c = t.custom;
             <ul>
               {tier.features.map((f) => <li>{f}</li>)}
             </ul>
-            <a class:list={["btn", tier.popular ? "btn-primary" : "btn-ghost"]} href={commerceHref}>{c.cta}</a>
+            <a class:list={["btn", tier.popular ? "btn-primary" : "btn-ghost"]} href={songCheckout[tier.key] || commerceHref}>{c.cta}</a>
           </div>
         ))}
       </div>
